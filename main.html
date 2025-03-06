@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recape main</title>  
+        <!-- daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>        
+</head>
+<body class="bg-pink-800">
+    <section class="max-w-md min-h-screen mx-auto bg-slate-200 py-6">
+        <header>
+            <nav class="flex justify-around items-center">
+                <img class="w-20" src="./assets/Group.png" alt="tickmark png">
+                <div>
+                    <h1 class="text-3xl font-bold">$<span id="main-balance">4500</span></h1>
+                    <p class="border p-1 rounded">available balance</p>
+                </div>
+                <button class="btn">logout</button>
+
+            </nav>
+        </header>
+        <section>
+            <h1 class="text-2xl font-bold mt-10">🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <!-- card -->
+            <div class=" cards grid grid-cols-3 mt-14 gap-2 p-2">
+           <div id="add-mony-card" class="box  cursor-pointer border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="wallet png">
+            <p>Add Mony</p>
+           </div>
+           <div id="cash-out-card" class="box border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/send1.png" alt="addmony png">
+            <p>Cashout</p>
+           </div>
+           <div class="box border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/money1.png" alt="addmony png">
+            <p>Transfer Money</p>
+           </div>
+           <div class="box border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="addmony png">
+            <p>Get Bonus</p>
+           </div>
+           <div class="box border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/purse1.png" alt="addmony png">
+            <p>Pay Bill</p>
+           </div>
+           <div class="box border rounded-md text-center p-4">
+            <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="addmony png">
+            <p>Transactions</p>
+           </div>
+         </div>
+        </section>
+        <!-- input from add mony section -->
+        <section id="addmony">
+            <h1>Add Mony</h1>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <legend>Select A Bank</legend>
+                        <select class="select select-ghost">
+                            <option disabled selected>Select A Bank</option>
+                            <option value="bkash">bkash</option>
+                            <option value="nagad">Nagad</option>
+                            <option value="bbl">BBL</option>
+                          </select>
+                      <fieldset class="fieldset">
+                        <label class="fieldset-label">Account Number</label>
+                        <input value="01234563354" id="Account-Number" type="number" class="input" placeholder="type your Account Number" required/>
+                        <label class="fieldset-label">Amount</label>
+                        <input id="Amount" type="number" class="input" placeholder="type your amount" required/>
+                        <label class="fieldset-label">Pin</label>
+                        <input value="1234" id="pin-number" type="number" class="input" placeholder="type your pin" required/>
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                        <button id="add-mony" class="btn btn-neutral border-none bg-blue-700 mt-4">Add Mony</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+        </section>
+        <!-- cashout section -->
+         <section id="cashout">
+          <h2>Cash out</h2>
+          <fieldset class="fieldset">
+            <label class="fieldset-label">Account Number</label>
+            <input value="01234563354" id="Account-Number" type="number" class="input" placeholder="type your Account Number" required/>
+            <label class="fieldset-label">Amount</label>
+            <input id="cashout-Amount" type="number" class="input" placeholder="type your amount" required/>
+            <label class="fieldset-label">Pin</label>
+            <input value="1234" id="cashout-pin-number" type="number" class="input" placeholder="type your pin" required/>
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="cash-out" class="btn btn-neutral border-none bg-blue-700 mt-4">cash out</button>
+          </fieldset>
+         </section>
+    </section>
+    <script src="./utilites/utitites.js"></script>
+    <script src="./javaScript/addmony.js"></script>
+</body>
+</html>
